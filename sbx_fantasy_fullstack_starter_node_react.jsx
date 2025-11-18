@@ -11,55 +11,28 @@ This repository is a **ready-to-run starter** for a Snowboard Cross (SBX) fantas
 
 ## Quick project layout (files included in this document)
 
-- `backend/package.json`
-- `backend/server.js`
-- `backend/db.js` (sqlite helper)
-- `backend/auth.js` (middleware)
-- `backend/pointsEngine.js` (where you code points rules)
-- `backend/routes/*.js` (routes inlined in server.js for brevity)
+- `backend/package.json
 
-- `frontend/package.json`
-- `frontend/src/App.jsx`
-- `frontend/src/api.js`
-- `frontend/src/components/{Login,Register,Dashboard,Admin}.jsx`
-- `README.md` (this file)
-
----
-
-## Setup & run (locally)
-
-1. Create two folders: `backend` and `frontend`.
-2. Copy the files below into those folders (filenames shown above).
-3. Backend:
-   - `cd backend`
-   - `npm install`
-   - `node server.js` (or `nodemon server.js` if you have nodemon)
-4. Frontend:
-   - `cd frontend`
-   - `npm install`
-   - `npm run dev` (or `npm start` depending on your template)
-
-The backend listens on port `4000` by default. The frontend expects it there.
-
----
-
-### Important: Default admin account
-
-The server bootstraps a default admin user:
-
-- **email:** admin@sbx.local
-- **password:** adminpass
-
-Change these in the server code after first run (or register a new admin and delete default user).
-
----
-
-## Files (copy each block into the appropriate file)
-
----
-
-### backend/package.json
-
+```json
+{
+  "name": "sbx-fantasy-backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "echo 'no build step'",
+    "render-start": "node server.js",
+    "render-build": "echo 'render build complete'"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "sqlite3": "^5.1.6"
+  }
+}
 ```json
 {
   "name": "sbx-fantasy-backend",
@@ -568,6 +541,9 @@ If you'd like, I can also:
 - Provide a Dockerfile and docker-compose for easy deploy
 - Convert the frontend into a full Create React App / Vite project with routing
 - Add user fantasy-team creation and scoring breakdown UI
+
+
+
 
 
 
